@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7002249aba2444c6846da5d21bd57347" Name="Diagram1">
+        <EntityTypeShape EntityType="SocialNetworkModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.Comment" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.Event" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.Hobby" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.Message" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.Post" Width="1.5" PointX="3" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.PrivacySettings" Width="1.5" PointX="3" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.Profession" Width="1.5" PointX="3" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.ProfileDescription" Width="1.5" PointX="3" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.User" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.Relationship" Width="1.5" PointX="3" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.CheckTodaysBirthdays" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.User_Information_Admin" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.View_Events" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.View_Following" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.View_Hobby" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.View_Messages" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.View_Posts" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.View_Professions" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.View_Relationships" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SocialNetworkModel.View_Settings" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="SocialNetworkModel.FK_Comment_Post" ManuallyRouted="false" />
+        <AssociationConnector Association="SocialNetworkModel.FK_Comment_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SocialNetworkModel.FK_Event_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SocialNetworkModel.FK_Hobby_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SocialNetworkModel.FK_Message_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SocialNetworkModel.FK_Message_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="SocialNetworkModel.FK_Post_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SocialNetworkModel.FK_PrivacySettings_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="SocialNetworkModel.FK_Profession_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="SocialNetworkModel.FK_ProfileDescription_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="SocialNetworkModel.FK_Relationship_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="SocialNetworkModel.Following" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SocialNetworkModelStoreContainer" CdmEntityContainer="SocialNetworkEntities7">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="SocialNetworkModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comment">
+      <EntityTypeMapping TypeName="SocialNetworkModel.Comment">
+        <MappingFragment StoreEntitySet="Comment">
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="DateCommented" ColumnName="DateCommented" />
+          <ScalarProperty Name="UserCommentedID" ColumnName="UserCommentedID" />
+          <ScalarProperty Name="PostID" ColumnName="PostID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Event">
+      <EntityTypeMapping TypeName="SocialNetworkModel.Event">
+        <MappingFragment StoreEntitySet="Event">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="EventDescription" ColumnName="EventDescription" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Notify" ColumnName="Notify" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hobby">
+      <EntityTypeMapping TypeName="SocialNetworkModel.Hobby">
+        <MappingFragment StoreEntitySet="Hobby">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="HobbyName" ColumnName="HobbyName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Message">
+      <EntityTypeMapping TypeName="SocialNetworkModel.Message">
+        <MappingFragment StoreEntitySet="Message">
+          <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+          <ScalarProperty Name="MessageText" ColumnName="MessageText" />
+          <ScalarProperty Name="FromID" ColumnName="FromID" />
+          <ScalarProperty Name="ToID" ColumnName="ToID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Post">
+      <EntityTypeMapping TypeName="SocialNetworkModel.Post">
+        <MappingFragment StoreEntitySet="Post">
+          <ScalarProperty Name="PostID" ColumnName="PostID" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="PictureURL" ColumnName="PictureURL" />
+          <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="TagID" ColumnName="TagID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrivacySettings">
+      <EntityTypeMapping TypeName="SocialNetworkModel.PrivacySettings">
+        <MappingFragment StoreEntitySet="PrivacySettings">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="PrivateEmail" ColumnName="PrivateEmail" />
+          <ScalarProperty Name="PrivateSex" ColumnName="PrivateSex" />
+          <ScalarProperty Name="PrivatePicture" ColumnName="PrivatePicture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profession">
+      <EntityTypeMapping TypeName="SocialNetworkModel.Profession">
+        <MappingFragment StoreEntitySet="Profession">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ProfessionName" ColumnName="ProfessionName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProfileDescription">
+      <EntityTypeMapping TypeName="SocialNetworkModel.ProfileDescription">
+        <MappingFragment StoreEntitySet="ProfileDescription">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="SocialNetworkModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="PictureURL" ColumnName="PictureURL" />
+          <ScalarProperty Name="DateJoined" ColumnName="DateJoined" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Relationship">
+      <EntityTypeMapping TypeName="SocialNetworkModel.Relationship">
+        <MappingFragment StoreEntitySet="Relationship">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="RelationshipWithID" ColumnName="RelationshipWithID" />
+          <ScalarProperty Name="Relationship1" ColumnName="Relationship" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CheckTodaysBirthdays">
+      <EntityTypeMapping TypeName="SocialNetworkModel.CheckTodaysBirthdays">
+        <MappingFragment StoreEntitySet="CheckTodaysBirthdays">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BirthMonth" ColumnName="BirthMonth" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Information_Admin">
+      <EntityTypeMapping TypeName="SocialNetworkModel.User_Information_Admin">
+        <MappingFragment StoreEntitySet="User Information Admin">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="PictureURL" ColumnName="PictureURL" />
+          <ScalarProperty Name="DateJoined" ColumnName="DateJoined" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PrivateEmail" ColumnName="PrivateEmail" />
+          <ScalarProperty Name="PrivatePicture" ColumnName="PrivatePicture" />
+          <ScalarProperty Name="PrivateSex" ColumnName="PrivateSex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Events">
+      <EntityTypeMapping TypeName="SocialNetworkModel.View_Events">
+        <MappingFragment StoreEntitySet="View Events">
+          <ScalarProperty Name="Created_By" ColumnName="Created By" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="EventDescription" ColumnName="EventDescription" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Following">
+      <EntityTypeMapping TypeName="SocialNetworkModel.View_Following">
+        <MappingFragment StoreEntitySet="View Following">
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="Follower" ColumnName="Follower" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Hobby">
+      <EntityTypeMapping TypeName="SocialNetworkModel.View_Hobby">
+        <MappingFragment StoreEntitySet="View Hobby">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="HobbyName" ColumnName="HobbyName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Messages">
+      <EntityTypeMapping TypeName="SocialNetworkModel.View_Messages">
+        <MappingFragment StoreEntitySet="View Messages">
+          <ScalarProperty Name="Message_Sender" ColumnName="Message Sender" />
+          <ScalarProperty Name="Message_Reciever" ColumnName="Message Reciever" />
+          <ScalarProperty Name="MessageText" ColumnName="MessageText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Posts">
+      <EntityTypeMapping TypeName="SocialNetworkModel.View_Posts">
+        <MappingFragment StoreEntitySet="View Posts">
+          <ScalarProperty Name="ProfilePicture" ColumnName="ProfilePicture" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="PostID" ColumnName="PostID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Text_of_Post" ColumnName="Text of Post" />
+          <ScalarProperty Name="PictureURL" ColumnName="PictureURL" />
+          <ScalarProperty Name="User_Posted" ColumnName="User Posted" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+          <ScalarProperty Name="Text_of_Comment" ColumnName="Text of Comment" />
+          <ScalarProperty Name="User_Commented" ColumnName="User Commented" />
+          <ScalarProperty Name="UsercommentedID" ColumnName="UsercommentedID" />
+          <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+          <ScalarProperty Name="DateCommented" ColumnName="DateCommented" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Professions">
+      <EntityTypeMapping TypeName="SocialNetworkModel.View_Professions">
+        <MappingFragment StoreEntitySet="View Professions">
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="ProfessionName" ColumnName="ProfessionName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Relationships">
+      <EntityTypeMapping TypeName="SocialNetworkModel.View_Relationships">
+        <MappingFragment StoreEntitySet="View Relationships">
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="User2" ColumnName="User2" />
+          <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Settings">
+      <EntityTypeMapping TypeName="SocialNetworkModel.View_Settings">
+        <MappingFragment StoreEntitySet="View Settings">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PrivateEmail" ColumnName="PrivateEmail" />
+          <ScalarProperty Name="PrivateSex" ColumnName="PrivateSex" />
+          <ScalarProperty Name="PrivatePicture" ColumnName="PrivatePicture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Following" TypeName="SocialNetworkModel.Following" StoreEntitySet="Following">
+      <EndProperty Name="User">
+        <ScalarProperty Name="UserID" ColumnName="UserID" />
+      </EndProperty>
+      <EndProperty Name="User1">
+        <ScalarProperty Name="UserID" ColumnName="FollowingID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="SocialNetworkModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="SocialNetworkModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="SocialNetworkModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="SocialNetworkModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SocialNetworkModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="SocialNetworkModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SocialNetworkModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="SocialNetworkModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="SocialNetworkModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="CreateEvent" FunctionName="SocialNetworkModel.Store.CreateEvent" />
+    <FunctionImportMapping FunctionImportName="CreateOrDeleteUser" FunctionName="SocialNetworkModel.Store.CreateOrDeleteUser" />
+    <FunctionImportMapping FunctionImportName="GetFollowers" FunctionName="SocialNetworkModel.Store.GetFollowers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SocialNetworkModel.GetFollowers_Result">
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetPostAndComment" FunctionName="SocialNetworkModel.Store.GetPostAndComment">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SocialNetworkModel.GetPostAndComment_Result">
+          <ScalarProperty Name="PostID" ColumnName="PostID" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+          <ScalarProperty Name="Text1" ColumnName="Text1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetShortName" FunctionName="SocialNetworkModel.Store.GetShortName" />
+    <FunctionImportMapping FunctionImportName="GetUserInfo" FunctionName="SocialNetworkModel.Store.GetUserInfo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SocialNetworkModel.GetUserInfo_Result">
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="PictureURL" ColumnName="PictureURL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PrintSexAverage" FunctionName="SocialNetworkModel.Store.PrintSexAverage">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SocialNetworkModel.PrintSexAverage_Result">
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SameProfession" FunctionName="SocialNetworkModel.Store.SameProfession">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SocialNetworkModel.SameProfession_Result">
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ProfessionName" ColumnName="ProfessionName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SendMessage" FunctionName="SocialNetworkModel.Store.SendMessage">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SocialNetworkModel.SendMessage_Result">
+          <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+          <ScalarProperty Name="MessageText" ColumnName="MessageText" />
+          <ScalarProperty Name="FromID" ColumnName="FromID" />
+          <ScalarProperty Name="ToID" ColumnName="ToID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SetUserHobby" FunctionName="SocialNetworkModel.Store.SetUserHobby" />
+  </EntityContainerMapping>
+</Mapping>

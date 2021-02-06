@@ -1,0 +1,28 @@
+﻿@model WebProject1.Models.AdminViewModel
+
+@{
+    ViewBag.Title = "AdminPanel";
+}
+
+<h2>AdminPanel</h2>
+
+<table>
+    @foreach (var user in Model.Users)
+    {
+        using (Html.BeginForm("Delete", "Admin", FormMethod.Post))
+        {
+            <tr>
+                <td>
+                    <input type="hidden" id="userId" name="userId" value="@user.UserID" />
+                </td>               
+                <td>
+                    <label><a href="@Url.Action("GetUserPage", "Home", new { userid = user.UserID })">@user.FirstName @user.LastName</a></label>
+                </td>
+                <td>
+                    <input type="submit" value="Delete" />
+                </td>
+            </tr>
+        }
+    }
+
+</table>

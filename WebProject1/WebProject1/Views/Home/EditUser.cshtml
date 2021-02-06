@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "EditUser";
+}
+@model WebProject1.Models.EditUserModel
+
+<h2>Edit User Informaiton:</h2>
+
+@using (Html.BeginForm("EditUser", "Home", FormMethod.Post))
+{
+
+   
+
+    <ul style="list-style-type:none">
+        <li>
+            <h2>Profile Description:</h2>
+            @Html.LabelFor(model => model.Description)
+            @Html.EditorFor(model => model.Description)
+        </li>
+        <li>
+            <h2>Profession:</h2>
+            @Html.LabelFor(model => model.ProfessionName)
+            @Html.EditorFor(model => model.ProfessionName)
+        </li>
+        <li>
+            <h2>Sex:</h2>
+            @Html.LabelFor(model => model.Sex)
+            @Html.EditorFor(model => model.Sex)
+        </li>
+
+        <li>
+            @Html.LabelFor(model => model.Hobby)
+            @Html.EditorFor(model => model.Hobby)
+        </li>
+    </ul>
+
+
+
+    @Html.HiddenFor(model => model.UserID)
+
+
+    @*@Html.TextBoxFor(model => model.Hobby, new { @class = "form-control", @placeholder = "Hobby" })
+
+        @Html.TextBoxFor(model => model.Profession.ProfessionName, new { @class = "form-control", @placeholder = "Profession" })*@
+
+    <label>&nbsp;</label>
+    <input id="submit" type="submit" value="Submit" class="submit" />
+
+}
+
+
+
+
+

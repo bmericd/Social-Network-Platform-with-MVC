@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "LogIn";
+    Layout = null;
+}
+
+
+@model WebProject1.Models.User
+
+<link href="~/Content/Site.css" rel=" stylesheet" />
+
+
+
+    @using (Html.BeginForm("LogIn", "Home", FormMethod.Post))
+    {
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Index</title>
+            <link rel="stylesheet" href="~/Content/SignUpStyle.css">
+            <script src="https://kit.fontawesome.com/2acb335fe4.js" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+        </head>
+        <body>
+
+            <div class="loginMessage">
+                <h1>Login with your IKU NETWORK Account</h1>
+            </div>
+
+            <div class="login">
+
+                <h1>Login</h1>
+
+                <ul>
+                    <li>
+                        <p>E-mail:</p>
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @placeholder = "Email" })
+                    </li>
+                    <li>
+                        <p>Password:</p>
+                        @Html.TextBoxFor(model => model.Password, new { @class = "form-control", @placeholder = "Password", @type = "password" })
+                    </li>
+                    <li>
+                        <label>&nbsp;</label>
+                        <input id="submit" type="submit" value="Submit" class="submit" />
+                    </li>
+                    <li>
+                        @Html.ActionLink("Go Back", "Start", "Start")
+                    </li>
+
+                    <li>
+                        @ViewBag.LoginError
+
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="footer">
+                <h3>Copyright 2021  - Buğra Meriç Değirmenci - Aziz Doğay Ekinci</h3>
+            </div>
+
+        </body>
+    </html>
+
+   
+    
+}
+
+   
+
+
+
+
+

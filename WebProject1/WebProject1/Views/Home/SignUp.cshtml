@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewBag.Title = "SignUp";
+    Layout = null;
+}
+
+@model WebProject1.Models.User
+
+
+<link href="~/Content/Site.css" rel=" stylesheet" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="~/Content/SignUpStyle.css">
+    <script src="https://kit.fontawesome.com/2acb335fe4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="loginMessage">
+        <h1>Sign Up To Become a Member of the IKU NETWORK Community</h1>
+    </div>
+
+    <div class="container">
+
+        @using (Html.BeginForm("SignUp", "Home", FormMethod.Post))
+        {
+
+            <div class="login">
+                <h1>Sign Up</h1>
+
+                <ul>
+                    <li>
+                        <p>First Name:</p>
+                        @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", @placeholder = "FirstName" })
+                    </li>
+                    <li>
+                        <p>Last Name:</p>
+                        @Html.TextBoxFor(model => model.LastName, new { @class = "form-control", @placeholder = "LastName" })
+                    </li>
+                    <li>
+                        <p>E-mail:</p>
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @placeholder = "Email" })
+                    </li>
+                    <li>
+                        <p>Password:</p>
+                        @Html.TextBoxFor(model => model.Password, new { @class = "form-control", @placeholder = "Password" })
+                    </li>
+                    <li>
+                        <label>&nbsp;</label>
+                        <input id="submit" type="submit" value="Submit" class="submit" />
+                    </li>
+                    <li>
+                        @Html.ActionLink("Go Back", "Start", "Start")
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+        }
+
+    </div>
+
+
+    <div class="footer">
+        <h3>Copyright 2021  - Buğra Meriç Değirmenci - Aziz Doğay Ekinci</h3>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+@*<html>
+    <head>
+        <title>Customer Form</title>
+    </head>
+    <body>
+        <form method="post">
+
+            <div>
+                <label for="Email">Email: </label>
+                <input type="text" name="Email" value="" />
+                @Html.ValidationMessage("Email")
+            </div>
+            <div>
+                <label for="Password">Password: </label>
+                <input type="text" name="Password" value="" />
+                @Html.ValidationMessage("Password")
+            </div>
+            <div>
+                <label>&nbsp;</label>
+                <input type="submit" value="Submit" class="submit" />
+            </div>
+
+        </form>
+    </body>
+    </html>
+
+
+
+    @{
+
+
+
+        if (IsPost)
+        {
+            var email = Request.Form["Email"];
+            var password = Request.Form["Password"];
+
+
+            <text>
+                You entered:
+                <br />
+                Email:  @email
+                <br />
+                Password: @password
+            </text>
+
+            }
+        }*@

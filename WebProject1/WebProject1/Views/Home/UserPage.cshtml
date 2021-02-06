@@ -1,0 +1,109 @@
+﻿
+@{
+    ViewBag.Title = "UserPage";
+}
+@model WebProject1.Models.User
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="~/Content/UserPageStyle.css">
+    <script src="https://kit.fontawesome.com/2acb335fe4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div class="userinfo">
+
+
+        @using (Html.BeginForm("UserPage", "Home", FormMethod.Post))
+        {
+
+            if (Model.UserID.ToString() == Session["ID"].ToString())
+            {
+                <img src="@Url.Content("~/Content/ProfilePictures/"+ Model.PictureURL)" alt="" style="width:300px;height: auto;">
+            }
+            else
+            {
+                if (Model.PrivacySettings != null && Model.PrivacySettings.PrivatePicture == true && Session["Name"].ToString() != "admin admin")
+                {
+                    <img src="~/Content/ProfilePictures/default.jpg" alt="" style="width:300px;height: auto;">
+                }
+                else
+                {
+                    <img src="@Url.Content("~/Content/ProfilePictures/"+ Model.PictureURL)" alt="" style="width:300px;height: auto;">
+                }
+            }
+
+
+
+            <h3>@Model.FirstName  @Model.LastName</h3>
+
+
+            if (Model.PrivacySettings != null)
+            {
+                <p> @Model.ProfileDescription.Description </p>
+            }
+
+            if (Model.UserID.ToString() == Session["ID"].ToString())
+            {
+                <h3>Email: @Model.Email</h3>
+            }
+            else
+            {
+                if ((Model.PrivacySettings != null && Model.PrivacySettings.PrivateEmail == true) && (Session["Name"].ToString() != "admin admin"))
+                {
+                    <h3>Email: Private</h3>
+                }
+                else
+                {
+                    <h3>Email: @Model.Email</h3>
+                }
+            }
+
+
+            if (Model.UserID.ToString() == Session["ID"].ToString())
+            {
+                <h3>Sex: @Model.Sex</h3> }
+            else
+            {
+                if ((Model.PrivacySettings != null && Model.PrivacySettings.PrivateSex == true) && (Session["Name"].ToString() != "admin admin"))
+                {
+                    <h3>Sex: Private</h3>
+                }
+                else
+                {
+                    <h3>Sex: @Model.Sex</h3>
+                }
+            }
+
+
+            if (Model.Profession != null)
+            {
+                <h3>Profession: @Model.Profession.ProfessionName</h3>
+            }
+
+            if (Model.Hobby != null)
+            {
+                
+                    <h3>Hobbies: @Model.Hobby.HobbyName </h3>
+                
+            }
+
+            if (Model.UserID.ToString() == Session["ID"].ToString() || Session["Name"].ToString() == "admin admin")
+            {
+
+                <h3><a href="@Url.Action("GetEditUser","Home", new { userid = Model.UserID })" class="editlink"> Edit</a></h3>
+
+            }
+
+
+        }
+
+    </div>
+</body>
+

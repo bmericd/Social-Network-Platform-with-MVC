@@ -1,0 +1,30 @@
+*{
+    margin:0px;
+}
+#nav{
+    background-color: #333;
+    position: sticky;
+}
+
+#nav ul{
+	list-style-type: none;
+	overflow: hidden;
+}
+#nav li a{
+	display: inline-block;
+	color: white;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+	padding: 20px 14px 8px 16px;
+	text-decoration: none;
+    transition: background-color 0.3s linear;
+    float: right;
+}
+#nav li a:first-child{
+    float: left;
+}
+#nav li a:hover{
+	background-color: #111;
+	
+}

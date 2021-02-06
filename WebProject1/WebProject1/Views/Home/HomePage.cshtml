@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "HomePage";
+
+    @model List<WebProject1.Models.UserPostCommentViewModel>
+
+}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="~/Content/HomeStyle.css">
+    <script src="https://kit.fontawesome.com/2acb335fe4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="welcomeMessage">
+        <h1>Welcome,</h1>
+        <h1>@Session["Name"].ToString()</h1>
+    </div>
+
+    <div id=content>
+
+        @using (Html.BeginForm("CreatePost", "Home", FormMethod.Post))
+        {
+
+            <div class="share-post">
+                <input type="text" id="Text" name="Text" class="form-control" placeholder="Enter your post" />
+                <input type="hidden" id="UserId" name="UserId" value="@Session["ID"].ToString()" />
+                <br>
+                <input type="submit" value="Share">
+            </div>
+
+
+        }
+        <div class="postandcomment">
+
+
+            @foreach (var item in Model)
+            {
+
+                <div class="post">
+                    <hr>
+                    <ul class="postlist">
+                        <div class="postbox">
+                            <li style="font-weight: bolder"><a href="@Url.Action("GetUserPage","Home", new { userid = item.Post.UserID})">@item.Post.User.Name </a> </li>
+                            <li style="text-decoration:none;font-size:120%">@item.Post.PostText</li>
+                            <li>Likes: @item.Post.Likes</li>
+                        </div>
+                        <li style="text-decoration:none; font-size:80%; color:rgb(59, 59, 59)">@item.Post.DatePosted</li>
+                    </ul>
+
+                </div>
+                using (Html.BeginForm("CreateComment", "Home", FormMethod.Post))
+                {
+                    <div class="share-comment">
+                        <input type="text" id="PostCommentText" name="PostCommentText" class="form-control" placeholder="Enter your comment" />
+                        <input type="hidden" id="UserID" name="UserID" value="@Session["ID"].ToString()" />
+                        <input type="hidden" id="PostID" name="PostID" value="@item.Post.PostID" />
+                        <br>
+                        <input type="submit" value="Share">
+                    </div>
+                }
+                if (item.Post.Comment.Count > 0)
+                {
+                    <div class="comment">
+                        <p>Comments:</p>
+                        @foreach (var comment in item.Post.Comment.OrderBy(s => s.DateCommented))
+                        {
+                            <ul>
+                                <div class="commentbox">
+                                    <li style="font-weight: bolder; text-decoration:none"> <a href="@Url.Action("GetUserPage","Home", new { userid = comment.UserCommentedID})"> @comment.UserCommentedName </a></li>
+                                    <li style="text-decoration:none"> @comment.CommentText</li>
+                                </div>
+                            </ul>
+
+                            <br />
+                        }
+                    </div>
+                }
+
+
+            }
+        </div>
+    </div>
+
+</body>
+</html>
+
+

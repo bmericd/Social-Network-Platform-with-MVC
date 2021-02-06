@@ -1,0 +1,78 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="~/Content/style.css">
+    <script src="https://kit.fontawesome.com/2acb335fe4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <title>@ViewBag.Title - IKU Network</title>
+
+</head>
+<body>
+
+    @using (Html.BeginForm("UserPage", "Home", FormMethod.Post))
+    {
+
+        <div id="nav">
+
+            <ul>
+                <li>
+                    <a href="@Url.Action("HomePage", "Home")"><img src="~/Content/Images/logored2.png" alt="" style="width:35px;height:35px;"> </a>
+                    <a href="@Url.Action("Start", "Start")"><i class="fas fa-sign-out-alt"></i></a>
+                    @if (Session["Name"].ToString() == "admin admin")
+                    {
+                        <a href="@Url.Action("AdminPanel","Admin")"><i class="fas fa-user"></i></a>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("GetUserPage","Home", new { userid = @Session["ID"].ToString() })"><i class="fas fa-user"></i></a>
+
+                    }
+                    <a href="@Url.Action("HomePage", "Home")"><i class="fas fa-home"></i></a>
+                    <a href="@Url.Action("SearchUser", "Home")"><i class="fas fa-search"></i></a>
+                </li>
+            </ul>
+        </div>
+    }
+
+    <div>
+        @RenderBody();
+    </div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+@*@Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")*@
+
+@*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+
+@*<li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>@Html.ActionLink("About", "About", "Home")</li>
+    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+
+
+
+
+@*<p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>*@
+
+
+@*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)*@
+
